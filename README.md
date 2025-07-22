@@ -25,7 +25,7 @@ The chatbot helps business users query PDF content directly using natural langua
 
 ## System Architecture
 
-![Architecture Diagram](./032f3a87-8167-490e-8ac8-f3ce49ea89fb.jpg)
+![Architecture Diagram](./architecture.jpg)
 
 ### High-Level Modules
 1. **Document Preprocessing**: PDF loader, chunker, and embedding
