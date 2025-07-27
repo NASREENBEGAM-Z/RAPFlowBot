@@ -66,7 +66,7 @@ Copy your PDF files to `./docs/`
 
 ### Run the Application
 ```bash
-python app.py
+streamlit run "conversational_rag_qdrant.py"
 ```
 Use the Streamlit interface to ask questions.
 
