@@ -21,12 +21,12 @@ def load_llm():
         torch_dtype=torch.float16,
         trust_remote_code=True
     )
-    return pipeline("text-generation", model=model, tokenizer=tokenizer, device=0)
+    return pipeline("text-generation", model=model, tokenizer=tokenizer)
 
 # Load SentenceTransformer for embeddings
 @st.cache_resource(show_spinner=False)
 def load_embedding_model():
-    return SentenceTransformer('all-MiniLM-L6-v2')
+    return SentenceTransformer("all-MiniLM-L6-v2")  
 
 # Chunk PDF documents into small passages
 def chunk_pdf(pdf_path, chunk_size=200, overlap=50):
@@ -92,9 +92,9 @@ def generate_answer(llm, context, query):
 
 # STREAMLIT UI
 def main():
-    st.title("🧠 Conversational RAG with Qdrant (Offline)")
+    st.title("🧠 RAP FLOW BOT - your offline query processor")
 
-    folder_path = st.text_input("Enter the folder path containing PDFs:", value="./docs")
+    folder_path = "Dataset"
     query = st.text_input("Enter your question:")
 
     if st.button("Run Query") and query:
